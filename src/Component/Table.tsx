@@ -7,7 +7,7 @@ import { RxCross2 } from "react-icons/rx";
 const Table = (props: { table: React.MouseEventHandler<SVGElement> | undefined; }) => {
     return (
         <div className='relative p-8 table_pop_wrapper'>
-            <div className='fixed top-0 right-0 left-0 bottom-0 bg-black opacity-90' onClick={props.table}></div>
+            <div className='fixed top-0 right-0 left-0 bottom-0 bg-black opacity-90'></div>
             <div className='fixed top-[50%] left-[5%] rounded-[17px] pop-up h-[auto] w-[800px] px-[50px] pb-[70px] bg-[#14181C]'>
                 <div className='table_pop'>
                     <h1 className='table_pop_head mb-4'>Staked  </h1>

@@ -85,7 +85,7 @@ const Swap = () => {
                             </div>
                             <div className="Select_currency br320:w-[130px] br480:w-[auto] br768:w-[200px] pt-2">
                                 <select className="select_input br320:text-[12px] br480:text-[16px]">
-                                    <option selected>Select Currency</option>
+                                    <option value={"selected"}>Select Currency</option>
                                     <option>India</option>
                                     <option>Nepal</option>
                                     <option>US doller</option>
