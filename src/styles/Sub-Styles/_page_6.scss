@@ -1,0 +1,383 @@
+@import "./color";
+@import "./mixins";
+
+.Page_6 {
+  background-color: $bgcolor;
+}
+
+.body_heading {
+  @include heading(36px);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.connect_wallet {
+  @include heading(18px);
+}
+
+.swap {
+  box-shadow: rgba(74, 72, 72, 0.557) 0px 1px 0px;
+}
+
+.setgear {
+  transform: rotate(90deg);
+}
+
+.swap_other {
+  border-radius: 50px 0px 0px 50px;
+  padding: 10px 49px;
+  background-color: $blue_button_color;
+  @include heading(16px);
+  @include borders(2px, $blue_button_color);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.swap_other:hover {
+  background-color: $bgcolor;
+  transition: 0.5s;
+  color: $blue_button_color;
+  @include borders(2px, $blue_button_color);
+}
+
+.Matic_P2P {
+  border-radius: 0px 50px 50px 0px;
+  padding: 10px 32px;
+  @include heading(16px);
+  color: $blue_button_color;
+  @include borders(2px, $blue_button_color);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.Matic_P2P:hover {
+  background-color: $blue_button_color;
+  color: white;
+  transition: 0.5s;
+}
+
+.swap_meter {
+  background-color: $sec-bgcolor;
+  @include border-radius(12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.swap_setting {
+  color: $textcolor;
+}
+
+.exchange {
+  font-size: 30px;
+  padding: 3px;
+  background-color: $bgcolor;
+  @extend .swap_setting;
+  @include borders(2px, $sec-bgcolor);
+  @include border-radius(8px);
+}
+
+.currency_input {
+  background-color: $input_color;
+  border-radius: 50px 0px 0px 50px;
+  padding: 14px;
+  color: $textcolor;
+  font-size: 16px;
+  font-weight: 600;
+  ::placeholder {
+    font-size: 18px;
+    font-weight: 600;
+    color: red;
+  }
+}
+
+
+.Select_currency {
+  color: $textcolor;
+  background-color: $input_color;
+  border-radius: 0px 50px 50px 0px;
+  padding: 14px 20px 14px 10px;
+  border-left: 1px solid rgba(199, 208, 219, 0.3);
+  margin-left: -5px;
+  display: flex;
+
+  .select_input {
+    color: $textcolor;
+    background-color: $input_color;
+    padding: 0px 40px 0px 0px;
+    border: none;
+    display: flex;
+    align-items: center;
+    border-radius: 0px 50px 50px 0px;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: .6;
+  }
+}
+
+.btn_swap {
+  color: $textcolor;
+  margin-top: 50px;
+  border-radius: 30px;
+  background-color: $blue_button_color;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+
+  Link {
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+
+.btn_swap:hover {
+  background-color: $textcolor;
+  color: $blue_button_color;
+  transition: 0.7s;
+}
+
+.gear_setting {
+  display: none;
+}
+
+#gear_set:checked ~ .gear_setting {
+  display: block;
+}
+
+.analytic_hover:hover .analytic {
+  display: block;
+  display: flex;
+}
+
+.analytic {
+  display: none;
+  background-color: $sec-bgcolor;
+}
+
+.swap_setting_hover {
+  background-color: $sec-bgcolor;
+  border-radius: 20px;
+  box-shadow: 3px 3px 6px #000000;
+  text-align: left;
+
+  .setting_head {
+    padding:  20px 15px;
+
+    h1 {
+      font-size: 15px;
+      color: $textcolor;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+    }
+  }
+
+  .Slippage_info {
+    box-shadow: rgba(74, 72, 72, 0.3) 0px 1px 0px,
+      rgba(74, 72, 72, 0.3) 0px 1px 0px inset;
+      padding:  20px 15px;
+
+    h1 {
+      font-size: 15px;
+      color: $textcolor;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+    }
+  }
+
+  .interface_setting {
+    padding:  20px 15px;
+
+    h1 {
+      font-size: 15px;
+      color: $textcolor;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+    }
+  }
+
+  .swap_persentage {
+    background-color: $input_color;
+    border-radius: 25px;
+
+    .swap_hover_input {
+      background-color: $input_color;
+      font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 480px) {
+  .swap_meter {
+    margin: 52px 30px;
+  }
+
+  .body_heading {
+    @include heading(28px);
+  }
+
+  .connect_wallet {
+    @include heading(16px);
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+  .break {
+    display: flex;
+    justify-content: center;
+  }
+
+  .currency_input {
+    padding: 8px;
+    font-size: small;
+  }
+
+  .Select_currency {
+    padding: 6px 8px;
+    width:150px;
+    
+    P{
+        font-size: 12px;
+        margin-top: 2px;
+    }
+
+    .select_input{
+        width: 130px;
+        font-size: 12px;
+        padding: 0px;
+      }
+  }
+
+  .swap_meter {
+    margin: 44px 10px;
+  }
+
+  .exchange {
+    font-size: 18px;
+    padding: 2px 3px;
+  }
+
+  .swap_other {
+    @include heading(small);
+    padding: 10px 15px;
+  }
+
+  .body_heading {
+    @include heading(20px);
+  }
+
+  .Matic_P2P {
+    @include heading(small);
+    padding: 10px 12px;
+  }
+
+  .connect_wallet {
+    @include heading(14px);
+  }
+}
+
+.toggle_one {
+  input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 70px;
+    height: 38px;
+    background: $sec-bgcolor;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    border: 1px solid $input_color;
+  }
+
+  label:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 32px;
+    height: 32px;
+    background: $blue_button_color;
+    border-radius: 90px;
+    transition: 0.3s;
+    border: 1px solid $input_color;
+  }
+
+  input:checked + label {
+    background-color: $input_color;
+  }
+
+  input:checked + label:after {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+  }
+
+  label:active:after {
+    width: 40px;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+}
+
+.toggle_two {
+  input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 70px;
+    height: 38px;
+    background: $sec-bgcolor;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    border: 1px solid $input_color;
+  }
+
+  label:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 32px;
+    height: 32px;
+    background: $blue_button_color;
+    border-radius: 90px;
+    transition: 0.3s;
+    border: 1px solid $input_color;
+  }
+
+  input:checked + label {
+    background-color: $input_color;
+  }
+
+  input:checked + label:after {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+  }
+
+  label:active:after {
+    width: 40px;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+}

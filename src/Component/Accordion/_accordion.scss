@@ -1,0 +1,29 @@
+@import "../../styles/Sub-Styles/color";
+@import "../../styles/Sub-Styles/mixins";
+
+.QnA_wrapper {
+  color: $textcolor;
+  font-size: 18px;
+  background-color: $sec-bgcolor;
+  margin: 25px 0px 0px 0px;
+  padding: 20px 30px 10px 30px;
+  width: 100%;
+  @include border-radius(11px);
+  box-shadow: 0px 3px 6px #000000;
+}
+
+.question {
+  font-size: 18px;
+  color: $textcolor;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+.answer_wrapper {
+    background-color: $oddColor;
+    padding: 0px 10px;
+    // margin-bottom: 0px;
+    font-size: 14px;
+    border-radius: 12px;
+    line-height: 30px;
+}
